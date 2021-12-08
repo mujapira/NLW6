@@ -1,23 +1,23 @@
-.content {
+.content{
   display: grid;
   grid-template-columns: 60% 40%;
   grid-template-rows: 11.4rem 1fr;
 
-  grid-template-areas:
-    "header header"
-    "left right";
+  grid-template-areas: 
+  'header header'
+  'left right'
 }
 
-header {
+header{
   grid-area: header;
 }
 
-#bg {
-
+#bg{
   grid-area: left;
-  display: flex;
-  align-items: center;
-  justify-content: right;
+
+  background: url('/images/fundoreal.png') no-repeat top/contain;
+  background-position-x: -10rem;
+  
 }
 
 main{
@@ -73,25 +73,25 @@ input, button, .button{
   height: 1px;
 }
 
-.ball {
-  width: 25rem;
-  height: 25rem;
-  background-color: var(--lBlue);
-  clip-path: circle(46.8% at 50% 50%);
+/*** create balls ***/
+.ball{
+  width: 21.2rem;
+  height: 21.2rem;
+  background: var(--blue);
+  clip-path: circle();
+  opacity: 0.1;
+
   position: fixed;
 }
 
-.ball.top {
-  width: 50rem;
-  height: 50rem;
-  top: -20rem;
-  left: -5rem;
-  z-index: -1;
+.ball.top{
+  top: -46rem;
+  width: 63.3rem;
+  right: -35rem;
+  height: 63.3rem;
 }
 
-.ball.bottom {
+.ball.bottom{
   bottom: -15rem;
-  right: 56rem;
+  right: 5.6rem
 }
-
-

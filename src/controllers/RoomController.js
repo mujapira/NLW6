@@ -13,12 +13,12 @@ module.exports = {
                 roomId += Math.floor(Math.random() * 10).toString()
             }
 
-            /* Verificar se esse numero ja existi */
+            /* Verificar se esse numero ja existe */
             const roomsExistIds = await db.all(`SELECT id FROM rooms`)
             isRoom = roomsExistIds.some(roomExistId => roomExistId === roomId)
 
             if(!isRoom){
-                /* Inseri a sala no banco */
+                /* Insere a sala no banco */
                 await db.run(`INSERT INTO rooms (
                     id,
                     pass
